@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Les courses</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+	<h1>Les courses</h1>
+    <h1>Ajouter un article</h1>
+    <div id="contains">
+	<textarea id="textArea" placeholder="Ajouter un article"></textarea>
+    </div>
+	<br>
+    <div id="buttons-containera">
+	<button id="add" onclick="createDivision(false)">Ajouter</button> 
+    <button id="add2" onclick="createDivision(true)">Ajouter comme important</button> 
+    <button id="delete" onclick="removeDivision()">Supprimer tout</button>
+    </div>
+    <div id="containpre" onclick="allliste()">
+        <h2>Pré-liste</h2>
+        <p>Ajouter la liste utilisée d'habitude</p>
+    </div>
+    <div id="containbio" onclick="bioliste()">
+        <h2>Pré-liste BIO</h2>
+        <p>Ajouter la liste utilisée d'habitude pour le bio</p>
+    </div>
+    <h1>Liste</h1>
+    <div id="container"></div>
+	<script src="script.js"></script>
+</body>
+</html>

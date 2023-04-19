@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap');
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Montserrat/static/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+:root {
+    --dark-pink: #ea4c89;
+    --main: #FF69B4;
+    --important: #9400D3;
+    --mygreen: #79b15a
+}
+body {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+.important {
+    background-color: var(--important);
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background-color: pink;
+}
+#containpre {
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    height: 80px;
+    border-radius: 50px;
+    width: 350px;
+}
+#containbio {
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    height: 90px;
+    border-radius: 50px;
+    width: 360px;
+    background-color: #5fbb47;
+}
+p {
+    font-family: 'Montserrat';
+}
+#contains {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+  }
+textarea {
+    resize: none;
+    margin: 0 auto;
+    height: 80px;
+    width: 327px;   
+}
+#buttons-containera {
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: pink;
+  }
+  
+  #container {
+    display: block;
+    flex-wrap: wrap; /* Ajout de cette ligne */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #container div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    height: 80px;
+    width: 350px;
+    border-radius: 50px;
+  }
+  
+  div {
+    background-color: var(--main);
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    height: 80px;
+    border-radius: 50px;
+    width: 350px;
+  }
+  
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--dark-pink);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--dark-pink);
+}
+
+footer {
+    font-family:'Montserrat';
+    text-align: center;
+    position: relative;
+    margin-top: auto;
+}
