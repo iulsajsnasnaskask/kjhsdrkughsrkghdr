@@ -46,10 +46,15 @@ function removeDivision() {
         localStorage.clear()
         location.reload()
     }
-function allliste() {
+function aldiliste() {
     //* Envoie des requêtes pour créer la liste via les fonctions
-    Bananes()
-    Pain()
+    Bananesa()
+    Paina()
+}
+function carreliste() {
+    //* Envoie des requêtes pour créer la liste via les fonctions
+    Bananesc()
+    Painc()
 }
 function bioliste() {
     //* Envoie des requêtes pour créer la liste via les fonctions
@@ -64,9 +69,9 @@ function tisane() {
     div.appendChild(article);
     document.getElementById('container').appendChild(div);
     div.setAttribute('id', `div-${counter}`)
-    div.setAttribute('class', 'important')
+    div.setAttribute('class', 'bio')
     div.setAttribute('value', false)
-    result.push({article: 'Tisane', important: true});
+    result.push({article: 'Tisane', important: 'bio'});
     saveResult();
 }
 function riz_complet() {
@@ -78,11 +83,11 @@ function riz_complet() {
     document.getElementById('container').appendChild(div);
     div.setAttribute('id', `div-${counter}`)
     div.setAttribute('value', false)
-    div.setAttribute('class', 'important')
-    result.push({article: 'Riz complet', important: true, fait: div.getAttribute('value')});
+    div.setAttribute('class', 'bio')
+    result.push({article: 'Riz complet', important: 'bio'});
     saveResult();
 }
-function Bananes() {
+function Bananesa() {
     counter++
     let div = document.createElement("div");
     let article = document.createElement("h2");
@@ -90,12 +95,12 @@ function Bananes() {
     div.appendChild(article);
     document.getElementById('container').appendChild(div);
     div.setAttribute('id', `div-${counter}`)
-    div.setAttribute('class', 'important')
+    div.setAttribute('class', 'aldi')
     div.setAttribute('value', false)
-    result.push({article: 'Bananes', important: true});
+    result.push({article: 'Bananes', important: 'aldi'});
     saveResult();
 }
-function Pain() {
+function Paina() {
     counter++
     let div = document.createElement("div");
     let article = document.createElement("h2");
@@ -103,9 +108,35 @@ function Pain() {
     div.appendChild(article);
     document.getElementById('container').appendChild(div);
     div.setAttribute('id', `div-${counter}`)
-    div.setAttribute('class', 'important')
+    div.setAttribute('class', 'aldi')
     div.setAttribute('value', false)
-    result.push({article: 'Pain', important: true});
+    result.push({article: 'Pain', important: 'aldi'});
+    saveResult();
+}
+function Bananesc() {
+    counter++
+    let div = document.createElement("div");
+    let article = document.createElement("h2");
+    article.innerHTML = 'Bananes'
+    div.appendChild(article);
+    document.getElementById('container').appendChild(div);
+    div.setAttribute('id', `div-${counter}`)
+    div.setAttribute('class', 'carrefour')
+    div.setAttribute('value', false)
+    result.push({article: 'Bananes', important: 'carrefour'});
+    saveResult();
+}
+function Painc() {
+    counter++
+    let div = document.createElement("div");
+    let article = document.createElement("h2");
+    article.innerHTML = 'Pain'
+    div.appendChild(article);
+    document.getElementById('container').appendChild(div);
+    div.setAttribute('id', `div-${counter}`)
+    div.setAttribute('class', 'carrefour')
+    div.setAttribute('value', false)
+    result.push({article: 'Pain', important: 'carrefour'});
     saveResult();
 }
 function saveResult() {
@@ -138,8 +169,17 @@ function chargeResult(container) {
                 if (item.important == true) { 
                     div.setAttribute('class', 'important')
                     div.setAttribute('style', 'background-color: var(--important)') 
-            } else {
+            } else if (item.important == false) {
                 div.setAttribute('style', 'background-color: var(--main)') 
+            } else if (item.important == 'bio') {
+                div.setAttribute('class', 'bio')
+                div.setAttribute('style', 'background-color: var(--bio)') 
+            } else if (item.important == 'aldi') {
+                div.setAttribute('class', 'aldi')
+                div.setAttribute('style', 'background-color: var(--aldi)') 
+            } else if (item.important == 'carrefour') {
+                div.setAttribute('class', 'carrefour')
+                div.setAttribute('style', 'background-color: var(--carrefour)') 
             }
 
             // ajout de la division créée à la division "se".
