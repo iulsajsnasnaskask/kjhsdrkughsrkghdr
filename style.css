@@ -9,7 +9,9 @@
     --dark-pink: #ea4c89;
     --main: #FF69B4;
     --important: #9400D3;
-    --mygreen: #79b15a
+    --bio: #5fbb47;
+    --aldi: #0192d5;
+    --carrefour: #e4001b;
 }
 body {
     display: block;
@@ -30,15 +32,16 @@ h2 {
 body {
     background-color: pink;
 }
-#containpre {
-    display: block;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
-    justify-content: center;
-    height: 80px;
-    border-radius: 50px;
-    width: 350px;
+#containaldi {
+  display: block;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  justify-content: center;
+  height: 90px;
+  border-radius: 50px;
+  width: 360px;
+  background-color: var(--aldi);
 }
 #containbio {
     display: block;
@@ -49,10 +52,30 @@ body {
     height: 90px;
     border-radius: 50px;
     width: 360px;
-    background-color: #5fbb47;
+    background-color: var(--bio);
+}
+#containcarre {
+  display: block;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  justify-content: center;
+  height: 90px;
+  border-radius: 50px;
+  width: 360px;
+  background-color: var(--carrefour);
 }
 p {
     font-family: 'Montserrat';
+}
+.bio {
+  background-color: var(--bio);
+}
+.aldi {
+  background-color: var(--aldi);
+}
+.carrefour {
+  background-color: var(--carrefour);
 }
 #contains {
     display: flex;
